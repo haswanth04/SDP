@@ -30,7 +30,7 @@ const ResumeManagement = () => {
     }
 
     try {
-      const response = await axios.get('http://localhost:3001/resumes', {
+      const response = await axios.get('https://sdp-sbwd.onrender.com/resumes', {
         headers: {
           'email': userEmail
         }
@@ -83,7 +83,7 @@ const ResumeManagement = () => {
     setSuccess('');
 
     try {
-      const response = await axios.post('http://localhost:3001/upload-resume', formData, {
+      const response = await axios.post('https://sdp-sbwd.onrender.com/upload-resume', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'email': userEmail
@@ -112,7 +112,7 @@ const ResumeManagement = () => {
     }
 
     try {
-      await axios.delete(`http://localhost:3001/resume/${resumeId}`, {
+      await axios.delete(`https://sdp-sbwd.onrender.com/resume/${resumeId}`, {
         headers: {
           'email': userEmail
         }
