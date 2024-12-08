@@ -36,7 +36,7 @@ const Chatbot = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:8080/generate", {
+      const response = await axios.post("https://sdp-sbwd.onrender.com/generate", {
         prompt: userInput
       });
 
