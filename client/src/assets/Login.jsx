@@ -10,7 +10,7 @@ const Login = ({ setIsLoggedIn }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3001/login', { email, password })
+    axios.post('https://sdp-sbwd.onrender.com/login', { email, password })
       .then(result => {
         if (result.data === "Success") {
           localStorage.setItem('userEmail', email);
